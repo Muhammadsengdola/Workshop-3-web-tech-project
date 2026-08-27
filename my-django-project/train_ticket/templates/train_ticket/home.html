@@ -1,0 +1,85 @@
+{% extends 'train_ticket/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="hero mb-5">
+
+    <div id="trainCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            {% for n in '123' %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img
+                    src="{% static 'train_ticket/images/' %}{{ n }}.png"
+                    class="d-block w-100"
+                    alt="Train Image"
+                >
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#trainCarousel"
+            data-bs-slide="prev"
+        >
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#trainCarousel"
+            data-bs-slide="next"
+        >
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+    <h1>🚆 ระบบขายตั๋วรถไฟ</h1>
+
+    <p class="fs-5">
+        ค้นหา-จองตั๋ว ยะลา, ปัตตานี, นราธิวาส
+        พร้อมระบบแอดมิน
+    </p>
+
+    <a class="btn btn-light btn-lg" href="{% url 'search' %}">
+        เริ่มค้นหาตั๋ว
+    </a>
+
+</div>
+
+<div class="row g-4">
+
+    {% for title,text,url,label in cards %}
+
+    <div class="col-md-4">
+
+        <div class="card h-100">
+
+            <div class="card-body">
+
+                <h5>{{ title }}</h5>
+
+                <p>{{ text }}</p>
+
+                <a href="{{ url }}" class="btn btn-outline-primary">
+                    {{ label }}
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

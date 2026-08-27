@@ -1,0 +1,1 @@
+console.log('Train Ticket System loaded');

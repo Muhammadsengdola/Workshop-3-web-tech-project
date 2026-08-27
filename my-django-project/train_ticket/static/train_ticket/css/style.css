@@ -1,0 +1,60 @@
+body{padding-top:70px}
+.container-narrow{max-width:960px;margin:0 auto;}
+.table td, .table th { vertical-align: middle; }
+footer{margin:40px 0;color:#777;text-align:center}
+.seat-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* จัดทั้งบอร์ดให้อยู่กึ่งกลาง */
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.seat-row {
+  display: grid;
+  grid-template-columns: repeat(5, 80px); /* แถวละ 5 */
+  gap: 12px;
+  justify-content: center;
+}
+
+.seat {
+  width: 80px;
+  height: 46px;
+  border: 2px solid #198754;
+  border-radius: 8px;
+  background: #fff;
+  color: #198754;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.seat input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.seat input:checked + span {
+  background: #198754;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seat.is-booked {
+  background: #adb5bd;
+  border-color: #adb5bd;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.navbar-custom{background:linear-gradient(135deg,#007bff,#6610f2);box-shadow:0 2px 10px rgba(0,0,0,.2)}.navbar-custom .nav-link,.navbar-custom .navbar-brand{color:#fff!important}.navbar-custom .nav-link:hover{color:#ffd700!important}.hero{background:linear-gradient(135deg,#007bff,#6610f2);color:#fff;border-radius:15px;padding:2rem;text-align:center;margin-top:20px}.hero img{border-radius:12px;max-height:420px;object-fit:cover}.form-card{background:#fff;border-radius:15px;padding:2rem;max-width:650px;margin:35px auto;box-shadow:0 4px 15px rgba(0,0,0,.1)}.card{border-radius:15px;box-shadow:0 4px 15px rgba(0,0,0,.08)}.footer-custom{background:linear-gradient(135deg,#007bff,#6610f2);border-radius:10px 10px 0 0}.seat-map{display:grid;grid-template-columns:repeat(5,80px);gap:12px;justify-content:center;margin:25px 0}.seat{width:80px;height:46px;border:2px solid #198754;border-radius:8px;background:#fff;color:#198754;font-weight:600;display:flex;align-items:center;justify-content:center;cursor:pointer}.seat input{position:absolute;opacity:0}.seat input:checked+span{background:#198754;color:#fff;width:100%;height:100%;border-radius:6px;display:flex;align-items:center;justify-content:center}.seat.is-booked{background:#adb5bd;border-color:#adb5bd;color:#fff;cursor:not-allowed}body{padding-top:70px;min-height:100vh;background:linear-gradient(to right,#c3dbf0,#e5d1fa)}
